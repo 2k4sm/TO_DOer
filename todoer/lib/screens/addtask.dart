@@ -37,7 +37,10 @@ class _AddTaskState extends State<AddTask> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.purpleAccent,
-        appBar: AppBar(title: Text("New Task")),
+        appBar: AppBar(
+          title: Text("New Task"),
+          elevation: 0,
+        ),
         body: Container(
           padding: EdgeInsets.all(15),
           child: Column(
