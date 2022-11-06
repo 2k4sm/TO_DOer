@@ -1,4 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AddTask extends StatefulWidget {
@@ -9,6 +12,27 @@ class AddTask extends StatefulWidget {
 }
 
 class _AddTaskState extends State<AddTask> {
+  TextEditingController titleController = TextEditingController();
+  TextEditingController discController = TextEditingController();
+
+  addtaskTofirebase() async {
+    FirebaseAuth auth = FirebaseAuth.instance;
+    final User? user = await auth.currentUser;
+    String uid = user!.uid;
+    var time = DateTime.now();
+    await FirebaseFirestore.instance
+        .collection('tasks')
+        .doc(uid)
+        .collection('mytasks')
+        .doc(time.toString())
+        .set({
+      'title': titleController.text,
+      'description': discController.text,
+      'time': time.toString()
+    });
+    Fluttertoast.showToast(msg: 'Task Added');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,6 +44,7 @@ class _AddTaskState extends State<AddTask> {
             children: [
               Container(
                   child: TextField(
+                controller: titleController,
                 decoration: InputDecoration(
                   labelText: 'Title',
                   border: OutlineInputBorder(),
@@ -30,6 +55,7 @@ class _AddTaskState extends State<AddTask> {
               ),
               Container(
                   child: TextField(
+                controller: discController,
                 decoration: InputDecoration(
                   labelText: 'Description',
                   border: OutlineInputBorder(),
@@ -52,7 +78,9 @@ class _AddTaskState extends State<AddTask> {
                       style: ElevatedButton.styleFrom(
                           shape: StadiumBorder(),
                           backgroundColor: Colors.amberAccent),
-                      onPressed: () {},
+                      onPressed: () {
+                        addtaskTofirebase();
+                      },
                     ),
                   )),
             ],
