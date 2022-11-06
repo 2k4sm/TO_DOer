@@ -62,6 +62,7 @@ class _HomeState extends State<Home> {
                       ),
                       margin: EdgeInsets.all(10),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -75,6 +76,21 @@ class _HomeState extends State<Home> {
                                           GoogleFonts.comfortaa(fontSize: 16),
                                     ))
                               ]),
+                          Container(
+                            child: IconButton(
+                                onPressed: () async {
+                                  await FirebaseFirestore.instance
+                                      .collection('tasks')
+                                      .doc(uid)
+                                      .collection('mytasks')
+                                      .doc(documents[index]['time'])
+                                      .delete();
+                                },
+                                icon: Icon(
+                                  Icons.delete_outline_rounded,
+                                  color: Colors.redAccent,
+                                )),
+                          )
                         ],
                       ),
                     );
