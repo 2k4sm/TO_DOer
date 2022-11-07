@@ -2,7 +2,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 import 'package:todoer/screens/addtask.dart';
+import 'package:todoer/screens/description.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -53,45 +55,66 @@ class _HomeState extends State<Home> {
                 return ListView.builder(
                   itemCount: documents.length,
                   itemBuilder: (context, index) {
-                    return Container(
-                      padding: EdgeInsets.all(15),
-                      height: 100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.blue,
-                      ),
-                      margin: EdgeInsets.all(10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
+                    var time = documents[index]['timestamp'].toDate();
+                    return InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Description(
+                                      title: documents[index]['title'],
+                                      description: documents[index]
+                                          ['description'],
+                                    )));
+                      },
+                      child: Container(
+                        padding: EdgeInsets.all(15),
+                        height: 100,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.blue,
+                        ),
+                        margin: EdgeInsets.all(10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Container(
+                                      margin: EdgeInsets.only(left: 25),
+                                      child: Text(
+                                        documents[index]['title'],
+                                        style:
+                                            GoogleFonts.comfortaa(fontSize: 17),
+                                      )),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Container(
                                     margin: EdgeInsets.only(left: 25),
                                     child: Text(
-                                      documents[index]['title'],
-                                      style:
-                                          GoogleFonts.comfortaa(fontSize: 16),
-                                    ))
-                              ]),
-                          Container(
-                            child: IconButton(
-                                onPressed: () async {
-                                  await FirebaseFirestore.instance
-                                      .collection('tasks')
-                                      .doc(uid)
-                                      .collection('mytasks')
-                                      .doc(documents[index]['time'])
-                                      .delete();
-                                },
-                                icon: Icon(
-                                  Icons.delete_outline_rounded,
-                                  color: Colors.redAccent,
-                                )),
-                          )
-                        ],
+                                        DateFormat.yMd().add_jm().format(time)),
+                                  ),
+                                ]),
+                            Container(
+                              child: IconButton(
+                                  onPressed: () async {
+                                    await FirebaseFirestore.instance
+                                        .collection('tasks')
+                                        .doc(uid)
+                                        .collection('mytasks')
+                                        .doc(documents[index]['time'])
+                                        .delete();
+                                  },
+                                  icon: Icon(
+                                    Icons.delete_outline_rounded,
+                                    color: Colors.redAccent,
+                                  )),
+                            )
+                          ],
+                        ),
                       ),
                     );
                   },

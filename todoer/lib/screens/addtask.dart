@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 
 class AddTask extends StatefulWidget {
   const AddTask({super.key});
@@ -28,7 +29,8 @@ class _AddTaskState extends State<AddTask> {
         .set({
       'title': titleController.text,
       'description': discController.text,
-      'time': time.toString()
+      'time': time.toString(),
+      'timestamp': Timestamp.now(),
     });
     Fluttertoast.showToast(msg: 'Task Added');
   }
