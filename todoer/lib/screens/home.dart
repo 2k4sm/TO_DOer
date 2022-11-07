@@ -78,6 +78,26 @@ class _HomeState extends State<Home> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
+                            Row(
+                              children: [
+                                Container(
+                                  child: Checkbox(
+                                    value: documents[index].get('checkbox'),
+                                    onChanged: (p0) async {
+                                      await FirebaseFirestore.instance
+                                          .collection('tasks')
+                                          .doc(uid)
+                                          .collection('mytasks')
+                                          .doc(documents[index]['time'])
+                                          .update({
+                                        'checkbox':
+                                            !documents[index].get('checkbox')
+                                      });
+                                    },
+                                  ),
+                                ),
+                              ],
+                            ),
                             Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,8 +106,15 @@ class _HomeState extends State<Home> {
                                       margin: EdgeInsets.only(left: 25),
                                       child: Text(
                                         documents[index]['title'],
-                                        style:
-                                            GoogleFonts.comfortaa(fontSize: 17),
+                                        style: TextStyle(
+                                            fontFamily: 'comfortaa',
+                                            fontSize: 20,
+                                            decoration:
+                                                documents[index].get('checkbox')
+                                                    ? TextDecoration.lineThrough
+                                                    : TextDecoration.none),
+
+                                        //GoogleFonts.comfortaa(fontSize: 17),
                                       )),
                                   SizedBox(
                                     height: 5,

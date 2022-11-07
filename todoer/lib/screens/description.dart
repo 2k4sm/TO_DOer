@@ -19,7 +19,7 @@ class Description extends StatelessWidget {
             margin: EdgeInsets.all(15),
             child: Text(
               title,
-              style: GoogleFonts.comfortaa(
+              style: GoogleFonts.robotoMono(
                   fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ),
