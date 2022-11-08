@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:todoer/screens/home.dart';
 
 class AddTask extends StatefulWidget {
   const AddTask({super.key});
@@ -86,6 +87,10 @@ class _AddTaskState extends State<AddTask> {
                           backgroundColor: Colors.purple[900]),
                       onPressed: () {
                         addtaskTofirebase();
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Home()),
+                        );
                       },
                     ),
                   )),
