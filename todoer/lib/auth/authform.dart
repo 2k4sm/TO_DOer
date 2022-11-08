@@ -66,23 +66,43 @@ class _AuthFormState extends State<AuthForm> {
                     if (!isLoginPage)
                       TextFormField(
                         keyboardType: TextInputType.emailAddress,
-                        key: ValueKey('email'),
+                        key: ValueKey('username'),
                         validator: (value) {
-                          if (value!.isEmpty || !value.contains('@')) {
-                            return 'Incorrect Email.';
+                          if (value!.isEmpty) {
+                            return 'Incorrect Username.';
                           }
                           return null;
                         },
                         onSaved: (value) {
-                          _email = value!;
+                          _username = value!;
                         },
                         decoration: InputDecoration(
                             border: OutlineInputBorder(
                                 borderRadius: new BorderRadius.circular(15),
                                 borderSide: new BorderSide()),
-                            labelText: "Email",
+                            labelText: "Username",
                             labelStyle: GoogleFonts.roboto()),
                       ),
+                    SizedBox(height: 10),
+                    TextFormField(
+                      keyboardType: TextInputType.emailAddress,
+                      key: ValueKey('email'),
+                      validator: (value) {
+                        if (value!.isEmpty || !value.contains('@')) {
+                          return 'Incorrect Email.';
+                        }
+                        return null;
+                      },
+                      onSaved: (value) {
+                        _email = value!;
+                      },
+                      decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderRadius: new BorderRadius.circular(15),
+                              borderSide: new BorderSide()),
+                          labelText: "Email",
+                          labelStyle: GoogleFonts.roboto()),
+                    ),
                     SizedBox(height: 10),
                     TextFormField(
                       keyboardType: TextInputType.emailAddress,
@@ -101,26 +121,6 @@ class _AuthFormState extends State<AuthForm> {
                               borderRadius: new BorderRadius.circular(15),
                               borderSide: new BorderSide()),
                           labelText: "Password",
-                          labelStyle: GoogleFonts.roboto()),
-                    ),
-                    SizedBox(height: 10),
-                    TextFormField(
-                      keyboardType: TextInputType.emailAddress,
-                      key: ValueKey('username'),
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'Incorrect Username.';
-                        }
-                        return null;
-                      },
-                      onSaved: (value) {
-                        _username = value!;
-                      },
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                              borderRadius: new BorderRadius.circular(15),
-                              borderSide: new BorderSide()),
-                          labelText: "Username",
                           labelStyle: GoogleFonts.roboto()),
                     ),
                     Container(

@@ -31,7 +31,7 @@ class _AddTaskState extends State<AddTask> {
       'description': discController.text,
       'time': time.toString(),
       'timestamp': Timestamp.now(),
-      'checkbox': true,
+      'checkbox': false,
     });
     Fluttertoast.showToast(msg: 'Task Added');
   }
