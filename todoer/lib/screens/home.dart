@@ -125,17 +125,23 @@ class _HomeState extends State<Home> {
                                     children: [
                                       Container(
                                           margin: EdgeInsets.only(left: 25),
-                                          child: Text(
-                                            documents[index]['title'],
-                                            style: TextStyle(
-                                                fontFamily: 'comfortaa',
-                                                fontSize: 20,
-                                                decoration: documents[index]
-                                                        .get('checkbox')
-                                                    ? TextDecoration.lineThrough
-                                                    : TextDecoration.none),
+                                          child: Container(
+                                            constraints: const BoxConstraints(
+                                              maxWidth: 200,
+                                            ),
+                                            child: Text(
+                                              documents[index]['title'],
+                                              style: TextStyle(
+                                                  fontFamily: 'comfortaa',
+                                                  fontSize: 20,
+                                                  decoration: documents[index]
+                                                          .get('checkbox')
+                                                      ? TextDecoration
+                                                          .lineThrough
+                                                      : TextDecoration.none),
 
-                                            //GoogleFonts.comfortaa(fontSize: 17),
+                                              //GoogleFonts.comfortaa(fontSize: 17),
+                                            ),
                                           )),
                                       SizedBox(
                                         height: 5,
