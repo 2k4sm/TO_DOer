@@ -14,7 +14,7 @@ class _AuthScreenState extends State<AuthScreen> {
     return Scaffold(
       appBar: AppBar(title: Text('Authentication')),
       body: AuthForm(),
-      backgroundColor: Colors.purple[200],
+      backgroundColor: Colors.blueGrey[200],
     );
   }
 }

@@ -91,7 +91,7 @@ class _HomeState extends State<Home> {
                                     .delete();
                               },
                               icon: Icons.delete,
-                              backgroundColor: Colors.purple,
+                              backgroundColor: Colors.red,
                               padding: EdgeInsets.all(15),
                               borderRadius: BorderRadius.circular(15),
                             )
@@ -101,7 +101,7 @@ class _HomeState extends State<Home> {
                             //height: 100,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
-                              color: Colors.purple[300],
+                              color: Colors.blueGrey[500],
                             ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -110,6 +110,7 @@ class _HomeState extends State<Home> {
                                   children: [
                                     Container(
                                       child: Checkbox(
+                                        activeColor: Colors.purple[900],
                                         value: documents[index].get('checkbox'),
                                         onChanged: (p0) async {
                                           await FirebaseFirestore.instance
@@ -174,7 +175,7 @@ class _HomeState extends State<Home> {
           ),
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          color: Colors.purple[200],
+          color: Colors.blueGrey[200],
         ),
         floatingActionButtonLocation:
             FloatingActionButtonLocation.miniCenterFloat,
@@ -186,7 +187,7 @@ class _HomeState extends State<Home> {
               shape: StadiumBorder(),
               child: Icon(Icons.add_box_outlined),
               //Icon(CupertinoIcons.add_circled),
-              backgroundColor: Colors.purple[700],
+              backgroundColor: Colors.purple[900],
               onPressed: (() {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => AddTask()));

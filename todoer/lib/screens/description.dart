@@ -10,6 +10,7 @@ class Description extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey[200],
       appBar: AppBar(title: const Text("Description")),
       body: Container(
           child: Column(
