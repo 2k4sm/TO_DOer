@@ -39,7 +39,7 @@ class _AddTaskState extends State<AddTask> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.purpleAccent,
+        backgroundColor: Colors.purple[200],
         appBar: AppBar(
           title: Text("New Task"),
           elevation: 0,
@@ -48,7 +48,6 @@ class _AddTaskState extends State<AddTask> {
           padding: EdgeInsets.all(15),
           child: Column(
             children: [
-              
               Container(
                   child: TextField(
                 controller: titleController,
@@ -84,7 +83,7 @@ class _AddTaskState extends State<AddTask> {
                       ),
                       style: ElevatedButton.styleFrom(
                           shape: StadiumBorder(),
-                          backgroundColor: Colors.amberAccent),
+                          backgroundColor: Colors.purple[900]),
                       onPressed: () {
                         addtaskTofirebase();
                       },

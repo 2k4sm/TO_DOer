@@ -91,7 +91,7 @@ class _HomeState extends State<Home> {
                                     .delete();
                               },
                               icon: Icons.delete,
-                              backgroundColor: Colors.red,
+                              backgroundColor: Colors.purple,
                               padding: EdgeInsets.all(15),
                               borderRadius: BorderRadius.circular(15),
                             )
@@ -101,7 +101,7 @@ class _HomeState extends State<Home> {
                             //height: 100,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
-                              color: Colors.blueGrey,
+                              color: Colors.purple[300],
                             ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -174,7 +174,7 @@ class _HomeState extends State<Home> {
           ),
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          color: Colors.yellowAccent,
+          color: Colors.purple[200],
         ),
         floatingActionButtonLocation:
             FloatingActionButtonLocation.miniCenterFloat,
@@ -186,7 +186,7 @@ class _HomeState extends State<Home> {
               shape: StadiumBorder(),
               child: Icon(Icons.add_box_outlined),
               //Icon(CupertinoIcons.add_circled),
-              backgroundColor: Colors.blueAccent,
+              backgroundColor: Colors.purple[700],
               onPressed: (() {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => AddTask()));

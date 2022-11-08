@@ -116,6 +116,7 @@ class _AuthFormState extends State<AuthForm> {
                       onSaved: (value) {
                         _password = value!;
                       },
+                      obscureText: true,
                       decoration: InputDecoration(
                           border: OutlineInputBorder(
                               borderRadius: new BorderRadius.circular(15),
@@ -137,7 +138,7 @@ class _AuthFormState extends State<AuthForm> {
                             },
                             style: ElevatedButton.styleFrom(
                                 backgroundColor:
-                                    Colors.blue, // Background color
+                                    Colors.deepPurple[800], // Background color
                                 //onPrimary: Colors.black,
                                 padding: EdgeInsets.symmetric(
                                     horizontal: 10.0, vertical: 10.0),
