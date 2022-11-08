@@ -34,8 +34,16 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: Text("TO_DOer"),
           elevation: 0,
+          actions: [
+            IconButton(
+                onPressed: () async {
+                  await FirebaseAuth.instance.signOut();
+                },
+                icon: Icon(Icons.logout_rounded))
+          ],
         ),
         body: Container(
           // ignore: sort_child_properties_last
@@ -93,7 +101,7 @@ class _HomeState extends State<Home> {
                             //height: 100,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
-                              color: Colors.blue,
+                              color: Colors.blueGrey,
                             ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -166,17 +174,19 @@ class _HomeState extends State<Home> {
           ),
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          color: Colors.white,
+          color: Colors.yellowAccent,
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.miniEndTop,
+        floatingActionButtonLocation:
+            FloatingActionButtonLocation.miniCenterFloat,
         floatingActionButton: SizedBox(
           height: 50,
           width: 100,
           child: FloatingActionButton(
+              elevation: 5,
               shape: StadiumBorder(),
-              child: Text('New Task'),
+              child: Icon(Icons.add_box_outlined),
               //Icon(CupertinoIcons.add_circled),
-              backgroundColor: Colors.brown,
+              backgroundColor: Colors.blueAccent,
               onPressed: (() {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => AddTask()));
