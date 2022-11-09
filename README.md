@@ -13,7 +13,7 @@
 
 
 # Data Flow:
-<img  align="center" src = "~/Downloads/dataflow.gif">
+<img  align="center" src = "https://github.com/2k4sm/TO_DOer/blob/main/dataflow.gif">
 
 ---
 ## Authpage
