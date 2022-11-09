@@ -23,11 +23,11 @@
 ---
 ## Homepage:-
 
-### -On opening the app it requests a data request and gets the required data from the backend server(firebase).
+### -On opening the app it requests data and gets it from the backend server(firebase).
 
-### -On adding a Task it sends the data as a request to store  in the database(firebase).
+### -On adding a Task it again sends the data as a request to store  in the database(firebase).
 
-### -After sending the data it also  gets the request to display in the homepage. 
+### -After storing data in firebase it stores it in the database. 
 ---
 # Credits:-
 
