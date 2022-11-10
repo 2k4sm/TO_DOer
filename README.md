@@ -36,6 +36,7 @@
 
 ## Team members:
  #### -Shrinibas Mahanta
+ #### <em><strong>Special Thanks to:-</strong></em>
  #### -Sagnik Behera
  #### -Puneet Sahoo
  #### -Piyush Tripathy
