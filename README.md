@@ -18,13 +18,13 @@
 <h1 align = center>Screenshots:</h1> 
 
 <h1 align = center>
-<img  width = "300" src = "./signup.png">
-<img width = "300" src = "./login.png">
+<img  width = "300" src = "https://github.com/2k4sm/TO_DOer/blob/main/assets/signup.png">
+<img width = "300" src = "https://github.com/2k4sm/TO_DOer/blob/main/assets/login.png">
 </h1>
 
 <h1 align = center>
-<img width = "300" src = "./task.png">
-<img width = "300" src = "./homepage.png">
+<img width = "300" src = "https://github.com/2k4sm/TO_DOer/blob/main/assets/task.png">
+<img width = "300" src = "https://github.com/2k4sm/TO_DOer/blob/main/assets/homepage.png">
 </h1>
 
 
@@ -33,7 +33,7 @@
 
 <h1 align = center>Data Flow:</h1> 
 <h1 align = center>
-<img  align="center" src = "./dataflow.gif">
+<img  align="center" src = "https://github.com/2k4sm/TO_DOer/blob/main/assets/dataflow.gif">
 </h1>
 
 ---
@@ -80,7 +80,7 @@
 
 <h2 align = center>Scan The QR Code On Your Android:</h2> 
 
-<h1 align = center><img width = "300" src = "./qr file.png"></h1>
+<h1 align = center><img width = "300" src = "https://github.com/2k4sm/TO_DOer/blob/main/assets/qr%20file.png"></h1>
 
 ---
 
