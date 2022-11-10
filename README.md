@@ -1,46 +1,88 @@
-#  TO_DOer
+<h1>
+<p align=center>
+ TO_DOer
+</p>
+<h1>
 
-###  Android Application made with flutter.
+<h2><p align=center>Android (ToDo app) Application made with flutter. </p></h2>  
 
-#  Tech Stack(Technologies used):
- -Dart Programming Language(flutter sdk).
+
+<h1 align = center>Tech Stack(Technologies used):</h1>  
+
+ ### -Dart Programming Language.
  
- -Firebase(bass)
-# Screenshots:
+ ### -Flutter SDK
+ 
+ ### -Firebase(BaaS)
+
+<h1 align = center>Screenshots:</h1> 
+
+<h1 align = center>
+<img  width = "300" src = "./signup.png">
+<img width = "300" src = "./login.png">
+</h1>
+
+<h1 align = center>
+<img width = "300" src = "./task.png">
+<img width = "300" src = "./homepage.png">
+</h1>
 
 
 
 
 
-
-# Data Flow:
-<img  align="center" src = "https://github.com/2k4sm/TO_DOer/blob/main/dataflow.gif">
+<h1 align = center>Data Flow:</h1> 
+<h1 align = center>
+<img  align="center" src = "./dataflow.gif">
+</h1>
 
 ---
-## Authpage
+## AuthPage
 
-### -The authentication page gets a request of USERS from the server and checks for the user login..if login info is found then it logs the user in.
-### -If a new user is trying to login then it adds a new user to the database.
+### -On starting the application a signup page is shown where you can create your account.
+### -If you are alreaady having an account then you can directly use the login page.
+### -Once you are logged in there will be no need to login again unless you logout.
 ---
-## Homepage:-
+## Functionality:-
 
-### -On opening the app it requests data and gets it from the backend server(firebase).
+### -The homepage displays all the tasks in a list view.
 
-### -On adding a Task it again sends the data as a request to store  in the database(firebase).
+### -The "+" button lets you add new tasks .
 
-### -After storing data in firebase it stores it in the database. 
+### -On the new task page you can specify a title and description for your task.
+
+### -On adding a Task the task data is stored in cloud using firebase(baas).
+
+### -The homepage syncronises itself after the task is added or deleted.
+
+### -To delete a task slide the task and press on the delete button. 
 ---
-# Credits:-
+<h1 align = center>Credits:-</h1> 
 
 ## Mentor:
  #### Joydev DasMohapatro Sir
 
-## Team members:
- #### -Shrinibas Mahanta
- #### <em><strong>Special Thanks to:-</strong></em>
- #### -Sagnik Behera
- #### -Puneet Sahoo
- #### -Piyush Tripathy
+## Created By:
+#### Shrinibas Mahanta 
+
+## Special Thanks to:
+ #### -Prachurya Jena.
+ #### -Sagnik Behera.
+ #### -Puneet Sahoo.
+ #### -Piyush Tripathy.
+
+
+<h1 align = center>To checkout My github Repository:</h1> 
+
+<h2 align = center>visit: <a href = "https://github.com/2k4sm/TO_DOer">github.com/2k4sm/TO_DOer</a></h2> 
+
+<h1 align = center>To Download The App:</h1> 
+
+<h2 align = center>Scan The QR Code On Your Android:</h2> 
+
+<h1 align = center><img width = "300" src = "./qr file.png"></h1>
+
+---
 
 
 
