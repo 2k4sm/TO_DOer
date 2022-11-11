@@ -66,8 +66,10 @@
 #### Shrinibas Mahanta 
 
 ## Special Thanks to:
- #### -Prachurya Jena.
+ 
  #### -Sagnik Behera.
+ #### -Prachurya Jena.
+ #### -Abhisekh Mohanty.
  #### -Puneet Sahoo.
  #### -Piyush Tripathy.
 
