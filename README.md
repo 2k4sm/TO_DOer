@@ -4,10 +4,10 @@
 </p>
 <h1>
 
-<h2><p align=center>Android (ToDo app) Application made with flutter. </p></h2>  
+<h2><p align=center>ToDo app {for android} (made with flutter). </p></h2>  
 
 
-<h1 align = center>Tech Stack(Technologies used):</h1>  
+<h1 align = center>Technologies used:</h1>  
 
  ### -Dart Programming Language.
  
@@ -25,16 +25,7 @@
 <h1 align = center>
 <img width = "300" src = "https://github.com/2k4sm/TO_DOer/blob/main/assets/task.png">
 <img width = "300" src = "https://github.com/2k4sm/TO_DOer/blob/main/assets/homepage.png">
-</h1>
 
-
-
-
-
-<h1 align = center>Data Flow:</h1> 
-<h1 align = center>
-<img  align="center" src = "https://github.com/2k4sm/TO_DOer/blob/main/assets/dataflow.gif">
-</h1>
 
 ---
 ## AuthPage
